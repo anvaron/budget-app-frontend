@@ -13,7 +13,7 @@ export default function Transactions() {
   useEffect(() => {
     console.log(API)
     axios
-      .get(`${API}/transactions`)
+      .get(`${API}transactions`)
       .then((res) => {
         setTransactions(res.data);
       })
