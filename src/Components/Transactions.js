@@ -28,18 +28,7 @@ export default function Transactions() {
         </thead>
         <tbody>
         {console.log(transactions)}
-          {transactions.map((transaction, index) => {
-            return (
-              <>
-                {console.log(transaction)}
-              </>
-              // <Transaction
-              //   transaction={transaction}
-              //   key={index}
-              //   index={index}
-              // />
-            );
-          })}
+          
         </tbody>
       </table>
     </section>
