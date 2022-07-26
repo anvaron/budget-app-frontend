@@ -27,13 +27,17 @@ export default function Transactions() {
           </tr>
         </thead>
         <tbody>
+          
           {transactions.map((transaction, index) => {
             return (
-              <Transaction
-                transaction={transaction}
-                key={index}
-                index={index}
-              />
+              <>
+                {console.log(transaction)}
+              </>
+              // <Transaction
+              //   transaction={transaction}
+              //   key={index}
+              //   index={index}
+              // />
             );
           })}
         </tbody>
