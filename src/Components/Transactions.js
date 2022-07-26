@@ -27,7 +27,7 @@ export default function Transactions() {
           </tr>
         </thead>
         <tbody>
-          
+        {console.log(transactions)}
           {transactions.map((transaction, index) => {
             return (
               <>
