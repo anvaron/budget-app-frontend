@@ -3,7 +3,7 @@
 import { Link } from "react-router-dom";
 
 export default function Transaction (props) {
-  const { txn, index } = props;
+  const { transaction, index } = props;
   
   // Date formating 
   const FormatDate = function(date){
@@ -20,12 +20,12 @@ export default function Transaction (props) {
   };
 
   return (
-    <tr className="Txn">
-      <td>{FormatDate(txn.date)}</td>
+    <tr className="item">
+      <td>{FormatDate(transaction.date)}</td>
       <td>
-        <Link to={`/transactions/${index}`}>{txn.item_name} </Link>
+        <Link to={`/transactions/${index}`}>{transaction.item_name} </Link>
       </td>
-      <td>{FormatCurrency(txn.amount)}</td>
+      <td>{FormatCurrency(transaction.amount)}</td>
     </tr>
   );
 }

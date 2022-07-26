@@ -1,18 +1,18 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-import Txn from "./Transaction";
+import Transaction from "./Transaction";
 //import "./Styles/Logs.css"
 
 const API = process.env.REACT_APP_API_URL;
 
 export default function Transactions() {
-  const [txns, setTxns] = useState([]);
+  const [transactions, setTransactions] = useState([]);
 
   useEffect(() => {
     axios
       .get(`${API}/transactions`)
-      .then((response) => setTxns(response.data))
+      .then((response) => setTransactions(response.data))
       .catch((error) => console.error("catch", error));
   }, []);
 
@@ -27,8 +27,12 @@ export default function Transactions() {
           </tr>
         </thead>
         <tbody>
-          {txns.map((txn, index) => {
-            return <Txn key={index} txn={txn} index={index} />;
+          {transactions.map((transaction, index) => {
+            return  <Transaction 
+                      key={index} 
+                      transaction={transaction} 
+                      index={index} 
+                    />;
           })}
         </tbody>
       </table>
