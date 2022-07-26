@@ -7,13 +7,17 @@ import Transaction from "./Transaction";
 const API = process.env.REACT_APP_API_URL;
 
 export default function Transactions() {
+
   const [transactions, setTransactions] = useState([]);
 
   useEffect(() => {
+    console.log(API)
     axios
       .get(`${API}/transactions`)
-      .then((response) => setTransactions(response.data))
-      .catch((error) => console.error("catch", error));
+      .then((res) => {
+        setTransactions(res.data);
+      })
+      .catch((error) => console.log(error));
   }, []);
 
   return (
