@@ -12,15 +12,15 @@ export default function TransactionEditForm() {
   // It returns a function that lets you navigate programmatically
   const navigate = useNavigate();
 
-  const [txn, setTxn] = useState({
+  const [transaction, setTransaction] = useState({
   });
 
   // UPDATE
-  const updateTxn = (txn) => {
+  const updateTransaction = (txn) => {
     axios
       .put(`${API}/transactions/${index}`, txn)
       .then((res) => {
-        setTxn(res.data);
+        setTransaction(res.data);
         navigate(`/transactions/${index}`);
       })
       .catch((c) => console.warn("catch", c));
@@ -30,14 +30,14 @@ export default function TransactionEditForm() {
     axios
       .get(`${API}/transactions/${index}`)
       .then((res) => {
-        setTxn(res.data);
+        setTransaction(res.data);
       })
       .catch((e) => console.error(e));
   }, [index]);
 
   // HANDLERS
   const handleTextChange = (event) => {
-    setTxn({ ...txn, [event.target.id]: event.target.value });
+    setTransaction({ ...transaction, [event.target.id]: event.target.value });
   };
 
   const handleSelectChange = () => {
@@ -50,7 +50,7 @@ export default function TransactionEditForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    updateTxn(txn);
+    updateTransaction(transaction);
   };
 
   return (
@@ -58,22 +58,21 @@ export default function TransactionEditForm() {
       <form onSubmit={handleSubmit}>
         <div className="form__control">
           <label htmlFor="date">Date</label>
+          {console.log(transaction.date)}
           <input
             id="date"
             type="date"
-            value={txn.date}
-            
+            value={(transaction.date)}
             onChange={handleTextChange}
-            placeholder=""
             required
           />
         </div>
         <div className="form__control">
-          <label htmlFor="name">Transaction name</label>
+          <label htmlFor="name">Transaction</label>
           <input
             id="item_name"
             type="text"
-            value={txn.item_name}
+            value={transaction.item_name}
             
             onChange={handleTextChange}
             placeholder="Name"
@@ -86,7 +85,7 @@ export default function TransactionEditForm() {
             id="category"
             type="text"
             name="category"
-            value={txn.category}
+            value={transaction.category}
             onChange={handleTextChange}
           />
         </div>  
@@ -95,7 +94,7 @@ export default function TransactionEditForm() {
           <input
             id="from"
             type="text"
-            value={txn.from}
+            value={transaction.from}
             onChange={handleTextChange}
           />
         </div>
@@ -104,7 +103,7 @@ export default function TransactionEditForm() {
           <input
             id="amount"
             type="number"
-            value={txn.amount}
+            value={transaction.amount}
             onChange={handleTextChange}
           />
         </div>

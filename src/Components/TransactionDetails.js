@@ -5,6 +5,7 @@ import axios from "axios";
 //import "./Styles/LogDetails.css"
 
 const API = process.env.REACT_APP_API_URL;
+const moment = require("moment");
 
 export default function TransactionDetails() {
   const { index } = useParams();
@@ -32,12 +33,7 @@ export default function TransactionDetails() {
 
   // Date formating 
   const FormatDate = function(date){
-    
-    const dateObj = new Date(date);
-    const month   = dateObj.toLocaleString("en-US", { month: "short" });
-    const day     = dateObj.getDate();
-    const year    = dateObj.getFullYear();
-    return `${month} ${day} ${year}`;
+    return moment(date).format('LL'); // Locale aware format: Month name, day of month, year
   };
 
   // Currency formating

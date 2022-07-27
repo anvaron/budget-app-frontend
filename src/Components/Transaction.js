@@ -1,17 +1,15 @@
 
 
+// DEPENDENCIES
 import { Link } from "react-router-dom";
+const moment = require("moment");
 
 export default function Transaction (props) {
   const { transaction, index } = props;
   
   // Date formating 
   const FormatDate = function(date){
-    
-    const dateObj = new Date(date);
-    const month   = dateObj.toLocaleString("en-US", { month: "short" });
-    const day     = dateObj.getDate();
-    return `${month} ${day}`;
+    return moment(date).format('LL'); // Locale aware format: Month name, day of month, year
   };
 
   // Currency formating
