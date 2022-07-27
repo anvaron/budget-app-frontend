@@ -32,6 +32,7 @@ export default function Transactions() {
         </thead>
         <tbody>
         {transactions.map((transaction, index) => {
+          console.log(transaction)
             return (
               <Transaction
                 transaction={transaction}
