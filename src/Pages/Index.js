@@ -3,11 +3,9 @@ import Transactions from "../Components/Transactions";
 export default function Index () {
 
   return (
-    <>
-      <div className="index">
-      <h2>Bank Account Total: </h2>
+    <section className="txn__index">
+      <h1>Transactions View</h1>
       <Transactions />
-    </div>
-    </>
+    </section>
   );
 }

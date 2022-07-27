@@ -1,10 +1,10 @@
-import TxnEditForm from "../Components/TransactionEditForm";
+import TransactionEditForm from "../Components/TransactionEditForm";
 
 export default function Edit() {
   return (
-    <div className="edit">
-      <h2>New</h2>
-      <TxnEditForm />
+    <div className="txn__edit">
+      <h2>Edit Transaction</h2>
+      <TransactionEditForm />
     </div>
   );
 }

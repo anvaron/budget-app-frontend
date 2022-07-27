@@ -1,10 +1,10 @@
-import TxnNewForm from "../Components/TransactionNewForm";
+import TransactionNewForm from "../Components/TransactionNewForm";
 
 export default function New() {
   return (
-    <div className="new">
-      <h2>New</h2>
-      <TxnNewForm />
+    <div className="txn__new">
+      <h2>Create Transaction</h2>
+      <TransactionNewForm />
     </div>
   );
 }
