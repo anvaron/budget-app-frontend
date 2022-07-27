@@ -7,13 +7,13 @@ import Transaction from "./Transaction";
 const API = process.env.REACT_APP_API_URL;
 
 export default function Transactions() {
-
+  //
   const [transactions, setTransactions] = useState([]);
+  const [account, setAccount] = useState(0);
 
   useEffect(() => {
-    console.log(API)
     axios
-      .get(`${API}transactions`)
+      .get(`${API}/transactions`)
       .then((res) => {
         setTransactions(res.data);
       })
@@ -31,8 +31,7 @@ export default function Transactions() {
           </tr>
         </thead>
         <tbody>
-        {transactions.map((transaction, index) => {
-          console.log(transaction)
+          {transactions.map((transaction, index) => {
             return (
               <Transaction
                 transaction={transaction}
