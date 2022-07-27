@@ -1,8 +1,8 @@
+// DEPENDENCIES
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-//import "./Styles/LogDetails.css"
 
 const API = process.env.REACT_APP_API_URL;
 const moment = require("moment");
