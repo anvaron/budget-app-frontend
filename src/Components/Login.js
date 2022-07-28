@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-//import './Login.css';
+import './Styles/Login.css';
 
 async function loginUser(credentials) {
  return fetch('http://localhost:8080/login', {
@@ -27,19 +27,29 @@ export default function Login({ setToken }) {
   }
 
   return(
-    <section className="container">
+    <section className="auth__app">
       <div className='auth__form'>
-      <h1>Please Log In</h1>
+      <h1>Budgetify</h1>
       <form onSubmit={handleSubmit}>
-        <label>
-          <p>Username</p>
-          <input type="text" onChange={e => setUserName(e.target.value)} />
-        </label>
-        <label>
-          <p>Password</p>
-          <input type="password" onChange={e => setPassword(e.target.value)} />
-        </label>
-        <div>
+        <div className="form__control">
+          <label>Username</label>
+          <input
+            id='username'
+            type="text" 
+            onChange={e => setUserName(e.target.value)}
+            required 
+          />
+        </div>
+        <div className="form__control">
+          <label>Password</label>
+          <input 
+            id='poassword'
+            type="password" 
+            onChange={e => setPassword(e.target.value)} 
+            required
+          />
+        </div>
+        <div className='button__group'>
           <button type="submit">Submit</button>
         </div>
       </form>
