@@ -1,6 +1,7 @@
 
 .wrapper {
-  padding: 3rem;border: 1px solid #669bbc; box-shadow: 0px 2px 0px 1px #1982c4
+  padding: 3rem;border: 1px solid #1982c4; box-shadow: 0px 2px 0px 1px #1982c4;
+  background-color: #bde0fe;
 }
 h2 { margin: 1rem 0 0 0; }
 ul {
@@ -15,6 +16,27 @@ ul li:nth-child(even) {
 ul li span {
   font-weight: bold;
 }
+table.txn__detail {
+  width: 50%;padding:1rem;margin: 2rem auto;
+  border-collapse:collapse;border-radius: 10px;border: 3rem solid #faf9f9;
+  box-sizing: border-box;box-shadow: 0px 5px 0px 1px #1982c4
+}
+table tbody td.header {
+  border:1px solid #b3adad;
+  padding: 1.8rem 1rem;
+  background-color: #5fa8d3;
+  font-size: 1.5rem;font-weight: 600;color: #FFF;
+}
+table tr:nth-child(even) td {
+  /* background-color: #e3f2fd; */
+}
+table td {
+  text-align:center;
+  padding:1rem;font-size: 1.5rem;font-weight: 800;
+  background: #ffffff;
+  color: #313030;
+}
+table td a { color: #1982c4; }
 button {
   padding: 1rem 2rem;margin: 0 1px; font-size: 1.2rem; font-weight: bold; 
   background-color: #669bbc;border: none;border-radius: 3px; color: #FFF;

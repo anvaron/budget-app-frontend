@@ -63,7 +63,7 @@ export default function TransactionNewForm() {
           />
         </div>
         <div className="form__control">
-          <label htmlFor="name">Transaction name</label>
+          <label htmlFor="name">Transaction Name</label>
           <input
             id="item_name"
             type="text"
@@ -102,7 +102,7 @@ export default function TransactionNewForm() {
             onChange={handleTextChange}
           />
         </div>
-        <div className="form__control button__group">
+        <div className="button__group">
         <input type="submit" />
           <Link to={`/transactions`}>
             <button>Back</button>

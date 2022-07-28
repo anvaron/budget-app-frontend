@@ -1,15 +1,18 @@
-.txn__total {
-  margin: 1rem 0;text-align: right;
-  font-size: 2rem;line-height: 2.8rem;font-weight: 800; color: #6096ba; 
+.txn__list {
+
 }
-.txn__total span{
+h2 {
+  padding: 1rem 2rem; margin: 0;display: inline-block; text-align: right;
+  font-size: 2rem;line-height: 2.6rem;font-weight: 800; color: #FFF; 
+}
+h2 span{
   padding: 5px 10px;margin: 0 0 0 5px;display: inline-block;color: #FFF;
   font-size: 2.4rem;font-weight: 800;border-radius: 3px;
 }
-.txn__total .positive{
+h2.positive{
   background-color: #2a9d8f;
 }
-.txn__total .negative{
+h2.negative{
   background-color: #e56b6f;
 }
 table {
@@ -33,11 +36,3 @@ table td {
   color: #313030;
 }
 table td a { color: #1982c4; }
-table td .success{
-  padding: 5px;display: inline-block; background-color: #2ec4b6;color: #FFF;
-  border-radius: 3px;
-}
-table td .error{
-  padding: 5px;display: inline-block;background-color: #e71d36;color: #FFF;
-  border-radius: 3px;
-}

@@ -42,24 +42,37 @@ export default function TransactionDetails() {
   };
 
   return(
-    <section className="container txn__details">
-      <div className="wrapper">
+    <section className="container ">
+      <div className="wrapper txn__details">
       <h2>Transaction Overview</h2>
-      <ul>
-        <li><span>Date:</span> {FormatDate(txn.date)}</li>
-        <li><span>Transaction Name:</span> {txn.item_name}</li>
-        <li><span>Amount:</span> {currency(txn.amount)}</li>
-        <li><span>Category:</span> {txn.category}</li>
-        <li><span>From:</span> {txn.from}</li>
-      </ul>
-
-      <Link to="/transactions">
-        <button>Back</button>
-      </Link>
-      <Link to={`/transactions/${index}/edit`}>
-        <button>Edit</button>
-      </Link>
-      <button onClick={handleDelete}>Delete</button>
+      <table className="txn__detail">
+        <tbody>
+          <tr>
+            <td className="header">Date</td><td>{FormatDate(txn.date)}</td>
+          </tr>
+          <tr>
+            <td className="header">Transaction</td><td>{txn.item_name}</td>
+          </tr>
+          <tr>
+            <td className="header">Amount</td><td>{currency(txn.amount)}</td>
+          </tr>
+          <tr>
+            <td className="header">Category</td><td>{txn.category}</td>
+          </tr>
+          <tr>
+            <td className="header">From</td><td>{txn.from}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div className="form__control button__group">
+        <Link to="/transactions">
+          <button>Back</button>
+        </Link>
+        <Link to={`/transactions/${index}/edit`}>
+          <button>Edit</button>
+        </Link>
+        <button onClick={handleDelete}>Delete</button>
+      </div>
       </div>
     </section>
   );

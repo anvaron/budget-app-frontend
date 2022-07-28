@@ -43,9 +43,9 @@ export default function Transactions() {
   }
 
   return (
-    <section className="container txn__view">
-      <h2 className="txn__total">Bank Account Total: 
-        <span className={checkBalance(totalBalance)}>{formatCurrency(totalBalance)}</span>
+    <section className="container txn__list">
+      <h2 className={checkBalance(totalBalance)}>Bank Account Total: 
+        <span>{formatCurrency(totalBalance)}</span>
       </h2> 
       <table>
         <thead>
