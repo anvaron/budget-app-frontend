@@ -1,0 +1,29 @@
+.wrapper {
+  border: none;box-shadow: none;background-color: #e7ecef;
+  border-radius: 3px;border: 1px solid #CDCDCD;
+}
+
+form {
+  width: 40%;padding: 3rem;margin: auto; box-sizing: border-box; 
+  
+}
+form .form__control {
+  padding: 0.5rem 0;
+}
+form label {
+  display: block;font-size: 1.5rem;line-height: 2rem; 
+}
+form input[type="text"], input[type="date"], textarea {
+  width: 100%; padding: 1rem;box-sizing: border-box;
+  border: 10px solid #5fa8d3;border-radius: 5px;
+  font-size: 1.5rem;line-height: 2rem;
+}
+form input[type="number"] {
+  width: 30%; padding: 1rem;box-sizing: border-box;
+  border: 10px solid #5fa8d3;border-radius: 5px;
+  font-size: 1.5rem;line-height: 2rem;
+}
+form input[type="submit"], button {
+  padding: 1rem 2rem;margin: 0 1px; font-size: 1.5rem; font-weight: bold; 
+  background-color: #669bbc;border: none;border-radius: 3px; color: #FFF; 
+}

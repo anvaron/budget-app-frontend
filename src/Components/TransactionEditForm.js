@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 
 import axios from "axios";
-//import "./Styles/LogForm.css"
+import "./Styles/TransactionForm.css"
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -55,6 +55,8 @@ export default function TransactionEditForm() {
 
   return (
     <section>
+      <div className="wrapper">
+      <h2>Edit Transaction</h2>  
       <form onSubmit={handleSubmit}>
         <div className="form__control">
           <label htmlFor="date">Date</label>
@@ -107,11 +109,14 @@ export default function TransactionEditForm() {
             onChange={handleTextChange}
           />
         </div>
+        <div className="form__control">
         <input type="submit" />
         <Link to={`/transactions`}>
           <button>Back</button>
         </Link>
+        </div>
       </form>
+      </div>
     </section>
   );
 }

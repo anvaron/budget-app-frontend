@@ -1,0 +1,22 @@
+
+.wrapper {
+  padding: 3rem;border: 1px solid #669bbc; box-shadow: 0px 2px 0px 1px #1982c4
+}
+h2 { margin: 1rem 0 0 0; }
+ul {
+  padding: 0rem;list-style: none;
+}
+ul li {
+  padding: 1rem;margin: 0.5rem 0;font-size: 1.5rem;
+}
+ul li:nth-child(even) {
+  /* background-color: #eaf4f4; */
+}
+ul li span {
+  font-weight: bold;
+}
+button {
+  padding: 1rem 2rem;margin: 0 1px; font-size: 1.2rem; font-weight: bold; 
+  background-color: #669bbc;border: none;border-radius: 3px; color: #FFF;
+}
+button:hover { cursor: pointer ;}

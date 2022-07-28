@@ -2,7 +2,7 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import "./Styles/TransactionDetails.css";
 
 const API = process.env.REACT_APP_API_URL;
 const moment = require("moment");
@@ -42,7 +42,9 @@ export default function TransactionDetails() {
   };
 
   return(
-    <section>
+    <section className="container txn__details">
+      <div className="wrapper">
+      <h2>Transaction Overview</h2>
       <ul>
         <li><span>Date:</span> {FormatDate(txn.date)}</li>
         <li><span>Transaction Name:</span> {txn.item_name}</li>
@@ -57,8 +59,8 @@ export default function TransactionDetails() {
       <Link to={`/transactions/${index}/edit`}>
         <button>Edit</button>
       </Link>
-
       <button onClick={handleDelete}>Delete</button>
+      </div>
     </section>
   );
 }

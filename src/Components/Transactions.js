@@ -1,5 +1,7 @@
 // DEPENDENCIES
 import { useState, useEffect } from "react";
+import "./Styles/Transactions.css";
+
 import axios from "axios";
 
 // MODELS 
@@ -31,9 +33,14 @@ export default function Transactions() {
     );
   }, [transactions]);
 
+  // Currency formating
+  const formatCurrency = function(number){
+    return new Intl.NumberFormat('en-US', {style: 'currency',currency: 'USD', minimumFractionDigits: 2}).format(number);
+  };
+
   return (
-    <section>
-      <h2>Bank Account Total: <span>{totalBalance}</span></h2> 
+    <section className="container txn__view">
+      <h2 className="txn__total">Bank Account Total: <span>{formatCurrency(totalBalance)}</span></h2> 
       <table>
         <thead>
           <tr>

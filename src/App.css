@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+main {
+  margin: 2rem 0 2rem;
+}
+.container {
+  width: 90%;margin: auto;
+}
+h2 {
+  font-size: 3rem;font-weight: 900; color: #004e98; 
+}
