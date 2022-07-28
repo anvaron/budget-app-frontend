@@ -1,3 +1,6 @@
+html {
+  width: max-content
+}
 .App {
   text-align: center;
 }

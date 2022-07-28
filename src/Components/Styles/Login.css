@@ -2,7 +2,7 @@
   height: 100vmax;background-color: #6a7cd7;
 }
 .auth__form {
-  padding: 3rem;margin: auto;box-sizing: border-box;
+  padding: 4rem;margin: auto;box-sizing: border-box;
 }
 .auth__form h1 {
   margin: 4rem auto; font-size: 8rem;line-height: 8rem;display: block;
@@ -10,7 +10,7 @@
   color: #FFF;text-shadow: 6px 8px 0px #00a8e8;text-decoration: none;
 }
 .auth__form form {
-  width: 60%;padding: 2rem;margin: auto; box-sizing: border-box; 
+  width: 60%;padding: 3rem;margin: auto; box-sizing: border-box; 
   background-color: #5fa8d3;border-radius: 5px;box-shadow: 0px 8px 2px 1px #1982c4
 }
 .auth__form form .form__control {
