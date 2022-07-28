@@ -37,7 +37,7 @@
   }
 }
 main {
-  padding: 4rem 0 2rem;background-color: #6a7cd7;
+  height: 100vh; padding: 4rem 0 4rem;background-color: #6a7cd7;
 }
 .container {
   width: 80%;margin: auto;

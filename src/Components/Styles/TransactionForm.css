@@ -36,5 +36,8 @@ form input[type="number"] {
 }
 form input[type="submit"], button {
   padding: 1rem 4rem;margin: 0 1px; font-size: 1.5rem; font-weight: bold; 
-  background-color: #669bbc;border: none;border-radius: 3px; color: #FFF; 
+  background-color: #00afb9;border: none;border-radius: 3px; color: #FFF; 
+}
+form button {
+  background-color: #3d5a80;
 }
