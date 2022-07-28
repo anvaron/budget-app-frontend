@@ -28,6 +28,7 @@ export default function Login({ setToken }) {
 
   return(
     <section className="container">
+      <div className='auth__form'>
       <h1>Please Log In</h1>
       <form onSubmit={handleSubmit}>
         <label>
@@ -42,6 +43,7 @@ export default function Login({ setToken }) {
           <button type="submit">Submit</button>
         </div>
       </form>
+      </div>
     </section>
   )
 }
