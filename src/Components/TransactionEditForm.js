@@ -54,7 +54,7 @@ export default function TransactionEditForm() {
   };
 
   return (
-    <section>
+    <section className="container txn__form">
       <div className="wrapper">
       <h2>Edit Transaction</h2>  
       <form onSubmit={handleSubmit}>
@@ -109,7 +109,7 @@ export default function TransactionEditForm() {
             onChange={handleTextChange}
           />
         </div>
-        <div className="form__control">
+        <div className="form__control button__group">
         <input type="submit" />
         <Link to={`/transactions`}>
           <button>Back</button>
