@@ -2,7 +2,7 @@
   height: 100vmax;background-color: #6a7cd7;
 }
 .auth__form {
-  width: 50%;padding: 3rem;margin: auto;box-sizing: border-box;
+  padding: 3rem;margin: auto;box-sizing: border-box;
 }
 .auth__form h1 {
   margin: 4rem auto; font-size: 8rem;line-height: 8rem;display: block;
@@ -26,7 +26,7 @@
 }
 .auth__form form input[type="text"], input[type="password"] {
   width: 100%; padding: 1rem;box-sizing: border-box;
-  border: 10px solid #5fa8d3;border-radius: 5px;
+  border: 10px solid #5fa8d6;border-radius: 5px;
   font-size: 1.5rem;line-height: 2rem;
 }
 .auth__form form input[type="submit"], button {
