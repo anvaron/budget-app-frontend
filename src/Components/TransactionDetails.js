@@ -44,35 +44,35 @@ export default function TransactionDetails() {
   return(
     <section className="container ">
       <div className="wrapper txn__details">
-      <h2>Transaction Overview</h2>
-      <table className="txn__detail">
-        <tbody>
-          <tr>
-            <td className="header">Date</td><td>{FormatDate(txn.date)}</td>
-          </tr>
-          <tr>
-            <td className="header">Transaction</td><td>{txn.item_name}</td>
-          </tr>
-          <tr>
-            <td className="header">Amount</td><td>{currency(txn.amount)}</td>
-          </tr>
-          <tr>
-            <td className="header">Category</td><td>{txn.category}</td>
-          </tr>
-          <tr>
-            <td className="header">From</td><td>{txn.from}</td>
-          </tr>
-        </tbody>
-      </table>
-      <div className="form__control button__group">
-        <Link to="/transactions">
-          <button>Back</button>
-        </Link>
-        <Link to={`/transactions/${index}/edit`}>
-          <button>Edit</button>
-        </Link>
-        <button onClick={handleDelete}>Delete</button>
-      </div>
+        <h2>Transaction Overview</h2>
+        <table className="txn__detail">
+          <tbody>
+            <tr>
+              <td className="header">Date</td><td>{FormatDate(txn.date)}</td>
+            </tr>
+            <tr>
+              <td className="header">Transaction</td><td>{txn.item_name}</td>
+            </tr>
+            <tr>
+              <td className="header">Amount</td><td>{currency(txn.amount)}</td>
+            </tr>
+            <tr>
+              <td className="header">Category</td><td>{txn.category}</td>
+            </tr>
+            <tr>
+              <td className="header">From</td><td>{txn.from}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div className="form__control button__group">
+          <Link to="/transactions">
+            <button className="btn__back">Back</button>
+          </Link>
+          <Link to={`/transactions/${index}/edit`}>
+          <button className="btn__edit">Edit</button>
+          </Link>
+          <button className="btn__delete" onClick={handleDelete}>Delete</button>
+        </div>
       </div>
     </section>
   );

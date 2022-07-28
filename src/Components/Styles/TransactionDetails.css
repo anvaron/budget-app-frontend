@@ -3,42 +3,40 @@
   padding: 3rem;border: 1px solid #1982c4; box-shadow: 0px 2px 0px 1px #1982c4;
   background-color: #bde0fe;
 }
-h2 { margin: 1rem 0 0 0; }
-ul {
-  padding: 0rem;list-style: none;
-}
-ul li {
-  padding: 1rem;margin: 0.5rem 0;font-size: 1.5rem;
-}
-ul li:nth-child(even) {
-  /* background-color: #eaf4f4; */
-}
-ul li span {
-  font-weight: bold;
-}
+.txn__details h2 { margin: 1rem 0; }
+
 table.txn__detail {
   width: 50%;padding:1rem;margin: 2rem auto;
   border-collapse:collapse;border-radius: 10px;border: 3rem solid #faf9f9;
   box-sizing: border-box;box-shadow: 0px 5px 0px 1px #1982c4
 }
-table tbody td.header {
+table.txn__detail tbody td.header {
   border:1px solid #b3adad;
   padding: 1.8rem 1rem;
   background-color: #5fa8d3;
   font-size: 1.5rem;font-weight: 600;color: #FFF;
 }
-table tr:nth-child(even) td {
+table.txn__detail tr:nth-child(even) td {
   /* background-color: #e3f2fd; */
 }
-table td {
+table.txn__detail td {
   text-align:center;
   padding:1rem;font-size: 1.5rem;font-weight: 800;
   background: #ffffff;
   color: #313030;
 }
-table td a { color: #1982c4; }
-button {
-  padding: 1rem 2rem;margin: 0 1px; font-size: 1.2rem; font-weight: bold; 
-  background-color: #669bbc;border: none;border-radius: 3px; color: #FFF;
+table.txn__detail td a { color: #1982c4; }
+.txn__details button {
+  padding: 1rem 3rem;margin: 0 1px; font-size: 1.5rem; font-weight: bold; 
+  border: none;border-radius: 3px; color: #FFF;
+}
+.txn__details button.btn__back {
+   background-color: #3d5a80;
+}
+.txn__details button.btn__edit {
+  background-color: #00afb9;
+}
+.txn__details button.btn__delete {
+   background-color: #e56b6f;
 }
 button:hover { cursor: pointer ;}
