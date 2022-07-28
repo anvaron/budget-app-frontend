@@ -5,7 +5,7 @@ header {
 }
 header h1 { margin: 0; }
 header h1 a {
-  font-size: 5rem;letter-spacing: -2px;font-family: bungee, sans-serif;
+  font-size: 5rem;line-height: 10rem;display: block; letter-spacing: -2px;font-family: bungee, sans-serif;
   color: #FFF;text-shadow: 6px 8px 0px #00a8e8;text-decoration: none;
 }
 header nav {
