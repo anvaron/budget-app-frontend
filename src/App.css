@@ -1,5 +1,5 @@
 html {
-  width: auto
+  width: auto;min-width: 100%;
 }
 .App {
   text-align: center;
@@ -40,7 +40,8 @@ html {
   }
 }
 main {
-  height: 100vh; padding: 4rem 0 4rem;background-color: #6a7cd7;
+  /* height: 100vh;  */min-height: 100vh;
+  padding: 4rem 0 4rem;background-color: #6a7cd7;
 }
 .container {
   width: 80%;margin: auto;
