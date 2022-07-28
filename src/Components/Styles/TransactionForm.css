@@ -14,7 +14,7 @@
   
 }
 .txn__form form .form__control {
-  padding: 0.5rem 0;display: grid;grid-template-columns: 1fr 3fr;
+  padding: 0.5rem 0;display: grid;grid-template-columns: 1fr 60%;
 }
 .txn__form form .button__group {
   margin: 1rem auto;
@@ -30,7 +30,7 @@
   font-size: 1.5rem;line-height: 2rem;
 }
 .txn__form form input[type="number"] {
-  width: 30%; padding: 1rem;box-sizing: border-box;
+  width: 50%; padding: 1rem;box-sizing: border-box;
   border: 10px solid #5fa8d3;border-radius: 0 5px 5px 0;
   font-size: 1.5rem;line-height: 2rem;
 }
