@@ -38,9 +38,15 @@ export default function Transactions() {
     return new Intl.NumberFormat('en-US', {style: 'currency',currency: 'USD', minimumFractionDigits: 2}).format(number);
   };
 
+  const checkBalance = function(balance){
+    return (balance > 1000) ? "positive" : "negative";
+  }
+
   return (
     <section className="container txn__view">
-      <h2 className="txn__total">Bank Account Total: <span>{formatCurrency(totalBalance)}</span></h2> 
+      <h2 className="txn__total">Bank Account Total: 
+        <span className={checkBalance(totalBalance)}>{formatCurrency(totalBalance)}</span>
+      </h2> 
       <table>
         <thead>
           <tr>
