@@ -28,7 +28,6 @@ function getToken() {
 }
 
 export default function App() {
-  //const [token, setToken] = useState();
   const token = getToken();
 
   if(!token) {

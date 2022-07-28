@@ -7,9 +7,8 @@ import axios from "axios";
 // MODELS 
 import Transaction from "./Transaction";
 
+// API HEROKU'S URL
 const API = process.env.REACT_APP_API_URL;
-//const API = "https://budget-app-restful-api.herokuapp.com";
-//const API = "http://localhost:3003";
 
 export default function Transactions() {
   //

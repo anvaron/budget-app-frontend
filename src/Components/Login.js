@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Styles/Login.css';
 
+const API = process.env.REACT_APP_API_URL;
+
 async function loginUser(credentials) {
- return fetch('http://localhost:8080/login', {
+ return fetch(`${API}/login`, {
    method: 'POST',
    headers: {
      'Content-Type': 'application/json'
