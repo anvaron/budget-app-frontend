@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
+import axios from "axios";
 import PropTypes from 'prop-types';
 import './Styles/Login.css';
 
 const API = process.env.REACT_APP_API_URL;
 
 async function loginUser(credentials) {
- return fetch(`${API}/login`, {
-   method: 'POST',
-   headers: {
+  return fetch(`${API}/login`, {
+  method: 'POST',
+  mode: 'no-cors',
+  headers: {
      'Content-Type': 'application/json'
-   },
-   body: JSON.stringify(credentials)
- })
-   .then(data => data.json())
+  },
+  body: JSON.stringify(credentials)
+  })
+    .then(data => data.json())
 }
 
 export default function Login({ setToken }) {
